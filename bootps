@@ -1,0 +1,10 @@
+service bootps
+{
+    socket_type     = dgram
+    protocol        = udp
+    wait            = yes
+    user            = root
+    server          = /usr/sbin/bootpd
+    server_args     = -i -t0 -d4 /etc/bootptab
+    disable         = no
+}
