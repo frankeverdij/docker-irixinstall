@@ -1,5 +1,5 @@
 # Use ubuntu image as parent
-FROM ubuntu:16.04
+FROM debian:stretch-slim
 
 # Update and install components
 RUN apt-get update \
@@ -11,7 +11,7 @@ RUN apt-get update \
     xinetd \
 &&  rm -rf /var/lib/apt/lists
 
-VOLUME /var/lib/tftpboot
+VOLUME /DIST
 
 # Create guest user
 RUN useradd -c "Guest User" \
@@ -53,5 +53,6 @@ EXPOSE 2048-32767
 # Make rsh port available to the world outside this container
 EXPOSE 514
 
+# use the xinetd super server as entrypoint
 ENTRYPOINT ["/usr/sbin/xinetd"]
 CMD ["-d","-dontfork"]

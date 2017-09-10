@@ -5,6 +5,6 @@ service tftp
     wait            = yes
     user            = root
     server          = /usr/sbin/in.tftpd
-    server_args     = -s /var/lib/tftpboot
+    server_args     = -s /DIST
     disable         = no
 }
