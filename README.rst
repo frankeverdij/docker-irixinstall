@@ -26,9 +26,9 @@ The example bootptab looks like this:
 iris:ha=080069c0ffee:sa=192.168.0.1:ds=192.168.0.1:rp=/DIST
 
 If we assume the dist directory to be at $HOME/dist then the docker run
-command should be:
+command should be::
 
-docker run --sysctl net.ipv4.ip_local_port_range="2048 32767" \
+  docker run --sysctl net.ipv4.ip_local_port_range="2048 32767" \
            --sysctl net.ipv4.ip_no_pmtu_disc=1 \
            --network host \
            --add-host iris:192.168.0.2 \
