@@ -1,5 +1,5 @@
 # Use ubuntu image as parent
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 # Update and install components
 RUN apt-get update \
