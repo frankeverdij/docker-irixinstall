@@ -3,8 +3,8 @@ docker-irixinstall
 
 A docker image with support for installing SGI systems from the net with IRIX.
 
-Debian Stretch-slim is used as parent image for the container. The container
-will be about 150Mb big. Alternatively, Ubuntu 16.04 will also work.
+Debian Buster-slim is used as parent image for the container. The container
+will be about 150Mb big.
 
 Build
 =====
