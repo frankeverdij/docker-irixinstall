@@ -9,7 +9,7 @@ RUN apt-get update \
     rsh-redone-server \
     tftpd \
     xinetd \
-&&  rm -rf /var/lib/apt/lists
+&&  rm -rf /var/lib/apt/lists/*
 
 VOLUME /DIST
 
