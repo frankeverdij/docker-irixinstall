@@ -9,9 +9,9 @@ will be about 150Mb big.
 Build
 =====
 
-Build the docker container from the image with:
+Build the docker container from the image with::
 
-docker build -t irix-install .
+  docker build -t irix-install .
 
 Configure
 =========
@@ -77,7 +77,7 @@ If the stand-alone shell is located on the install server at
 '$HOME/dist/irix6522A/dist/sa', then enter '/irix6522A/dist'
 
 If you get ARP warnings about not being able to resolve the server, try adding
-a 'srvaddr' to the PROM environment variable::
+a 'srvaddr' variable to the PROM environment::
 
   setenv -p srvaddr 192.168.0.1
 
